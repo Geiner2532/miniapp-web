@@ -18,3 +18,27 @@ function enviarFormulario(event) {
     
     console.log('Formulario enviado por:', nombre, email);
 }
+
+// Efecto de scroll suave para los enlaces del menú
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    console.log('Página Restaurante Sabor Casero cargada correctamente');
+});
