@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sabor Casero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🍽️ Sabor Casero</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Presentación -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bienvenidos a Sabor Casero</h2>
+                <p>Donde la tradición y el sabor se encuentran</p>
+                <button class="btn-primary" onclick="mostrarMensajeBienvenida()">Ver Menú</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Restaurante Sabor Casero">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios/Productos -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Nuestro Menú Destacado</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Bandeja Paisa</h3>
+                    <p>Deliciosa bandeja paisa tradicional con frijoles, arroz, chicharrón, carne molida y plátano maduro.</p>
+                    <span class="price">$25.000</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Sancocho de Gallina</h3>
+                    <p>Auténtico sancocho de gallina criolla con papa, yuca, mazorca y plátano.</p>
+                    <span class="price">$20.000</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Postre de la Casa</h3>
+                    <p>Delicioso postre tres leches con frutos rojos y crema chantilly.</p>
+                    <span class="price">$8.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Reservas y Contacto</h2>
+            <form class="contact-form" onsubmit="enviarFormulario(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de reserva:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Restaurante Sabor Casero. Todos los derechos reservados.</p>
+            <p>📍 Calle 123 #45-67, Ciudad | 📞 (57) 123-4567 | ✉️ info@saborcasero.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
